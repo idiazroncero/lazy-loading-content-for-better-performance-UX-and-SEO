@@ -1,0 +1,86 @@
+.section-inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3rem 10rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: $backgroundColor;
+  background-image: url("../../images/logo-horizontal.png") no-repeat 95% 0% /
+    15% auto;
+}
+
+[data-layout="img"] {
+  img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+[data-layout="main"] {
+  .section-inner {
+    h1 {
+      max-width: 60%;
+    }
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 3rem;
+    text-align: left;
+    background: url("../../images/logo-horizontal.png") no-repeat 95% 0% / 25%
+        auto,
+      url("../../images/main.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="presentation1"] {
+  .section-inner {
+    text-align: center;
+    padding: 5% 20%;
+    background: url("../../images/logo-horizontal.png") no-repeat 3% 0% / 15%
+        auto,
+      url("../../images/presentation1.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="presentation2"] {
+  .section-inner {
+    text-align: center;
+    padding: 5% 20%;
+    background: url("../../images/logo-horizontal.png") no-repeat 95% 0% / 15%
+        auto,
+      url("../../images/presentation2.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="diapo1"] {
+  .section-inner {
+    background: url("../../images/logo-horizontal.png") no-repeat 2% 2% / 12%
+        auto,
+      url("../../images/diapo1.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="diapo2"] {
+  .section-inner {
+    background: url("../../images/logo-horizontal.png") no-repeat 95% 2% / 12%
+        auto,
+      url("../../images/diapo2.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="diapo3"] {
+  .section-inner {
+    background: url("../../images/logo-horizontal.png") no-repeat 3% 2% / 12%
+        auto,
+      url("../../images/diapo3.svg") no-repeat center center / cover;
+  }
+}
+
+[data-layout="diapo4"] {
+  .section-inner {
+    background: url("../../images/logo-horizontal.png") no-repeat 4% 2% / 15%
+        auto,
+      url("../../images/diapo4.svg") no-repeat center center / cover;
+  }
+}

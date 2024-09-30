@@ -1,0 +1,265 @@
+/**
+ * DrupalCon Europe 2024 (Barcelona) theme for reveal.js.
+ *
+ * By Ignacio Díaz-Roncero Fraile: http://idiazroncero.com
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #f2f2f2;
+
+$mainColor: #3b3b3b;
+$headingColor: #04557b;
+
+$mainFontSize: 38px;
+$mainFont: "Montserrat", sans-serif;
+$headingFont: "Bitter", serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$headingLineHeight: 1.05;
+$headingMargin: 0 0 1em 0;
+// $headingTextShadow: -0.05em 0 $backgroundColor, 0 0.05em $backgroundColor,
+//   0.05em 0 $backgroundColor, 0 -0.05em $backgroundColor;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: rgba($linkColor, 0.75);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+@import "dceu-2024/layouts";
+@import "dceu-2024/whoami";
+
+// body {
+//   --slide-scale: 1 !important;
+
+//   .slides {
+
+//   }
+// }
+
+[data-dark-theme] {
+  --r-main-color: #fff;
+  --r-heading-color: #fff;
+  --r-link-color: #ccc;
+  --r-link-color-dark: #{darken(#ccc, 15%)};
+  --r-link-color-hover: #fff;
+  color: var(--r-main-color);
+}
+
+// h1,
+// h2,
+// h3 {
+//   text-shadow: 0px 0px 1px #fff;
+// }
+
+#idr-reveal {
+  background-color: #ddd;
+  .slides section {
+    bottom: 0;
+    top: 0;
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+.font-lg {
+  font-size: 1.25em;
+}
+
+.font-sm {
+  font-size: 0.75em;
+}
+
+.font-xs,
+table:not(.hljs-ln) {
+  font-size: 0.6em;
+}
+
+.col-2 {
+  display: flex;
+  text-align: left;
+  gap: 1em;
+
+  .col {
+    flex: 0 0 50%;
+  }
+}
+
+pre.code-wrapper {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 400px;
+
+  code {
+    padding: 2rem;
+  }
+}
+
+.reveal pre code {
+  max-height: 100%;
+}
+
+div.fragment {
+  width: 100%;
+}
+
+img {
+  margin: 0 !important;
+}
+
+p {
+  margin-top: 0 !important;
+}
+
+.alert {
+  background-color: #f5b836;
+  text-align: left;
+  padding: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 0.75em;
+
+  p {
+    margin: 0;
+  }
+}
+
+.scroller-img {
+  overflow: auto;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 1000%;
+    height: auto;
+  }
+}
+
+.reveal table {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.66em;
+  border-right: 1px solid #bbb;
+
+  &:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.bigpipe {
+  font-size: 0.7em;
+  max-width: 800px;
+  outline: 6px solid black;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  p {
+    margin: 0;
+  }
+
+  &-1 {
+    border: 6px solid #009cde;
+    padding: 1em;
+  }
+  &-2 {
+    border: 6px solid #f46351;
+    padding: 1em;
+  }
+  &-3 {
+    border: 6px solid #009cde;
+    padding: 1em;
+  }
+}
+
+.hljs-comment {
+  color: #96917c !important;
+}
+
+@keyframes appear {
+  from {
+    position: absolute;
+    opacity: 0;
+  }
+  to {
+    position: static;
+    opacity: 1;
+  }
+}
+
+.cls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  border: 6px solid #96917c;
+  padding: 0.25em;
+  height: calc(200px + 0.75em);
+  margin-bottom: 0.5em;
+  .cls-lazy {
+    border: 6px solid #f46351;
+    height: 100px;
+    width: 200px;
+    animation: appear 5s ease 2s infinite normal forwards;
+  }
+
+  .cls-eager {
+    border: 6px solid #009cde;
+    height: 100px;
+    width: 200px;
+  }
+}
+
+.placeholder-sample {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  border: 6px solid #96917c;
+  padding: 0.25em;
+  width: 800px;
+}
+
+.placeholder-sample-static {
+  border: 6px solid #009cde;
+  height: 250px;
+  padding: 0.25em;
+}
+
+.placeholder-sample-dynamic {
+  border: 6px solid #f46351;
+  padding: 0.25em;
+  div {
+    display: flex;
+    gap: 0.25em;
+  }
+  span {
+    height: 100px;
+    flex: 1;
+    display: block;
+    background-color: #f46351;
+  }
+}

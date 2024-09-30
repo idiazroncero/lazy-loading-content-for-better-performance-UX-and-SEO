@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Drupal test</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/dceu-2024.css" />
+
+    <!-- Font Stack via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <!-- The ID is a dirty quick to over-qualify selectors for overrides -->
+    <div class="reveal" id="idr-reveal">
+      <div class="slides">
+        <section
+          data-layout="main"
+          data-dark-theme
+          data-markdown="content/0a-title.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation1"
+          data-dark-theme
+          data-markdown="content/0b-whoami.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo4"
+          data-markdown="content/0c-caveats.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation2"
+          data-markdown="content/1a-title.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo2"
+          data-markdown="content/1b-why-caching-matters.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation1"
+          data-markdown="content/2a-title.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+          data-dark-theme
+        ></section>
+        <section
+          data-layout="diapo1"
+          data-markdown="content/2b-caching.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation2"
+          data-markdown="content/3a-title.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo1"
+          data-markdown="content/3b-placeholdering.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo2"
+          data-markdown="content/3c-understanding-all.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation1"
+          data-markdown="content/4a-title.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+          data-dark-theme=""
+        ></section>
+        <section
+          data-layout="diapo1"
+          data-markdown="content/4b-placeholdering-previews.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo3"
+          data-markdown="content/4b-know-your-cache.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo2"
+          data-markdown="content/4c-manual-placeholders.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="diapo1"
+          data-markdown="content/4d-extra-modules.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+        <section
+          data-layout="presentation1"
+          data-markdown="content/thankyou.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+          data-dark-theme
+        ></section>
+        <section
+          data-layout="presentation1"
+          data-markdown="content/contribution.md"
+          data-separator-vertical="^\|\n\|\n\|"
+          data-separator-notes="^Note:"
+        ></section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        width: 1600,
+        height: 900,
+        margin: 0,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
