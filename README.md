@@ -9,7 +9,7 @@ Slides for the DrupalCon Barcelona 2024 talk.
 
 Improve your application look & feel and performance using Drupal's built-in capabilities!
 
-###Prerequisite
+### Prerequisite
 
 Medium to advanced knowledge of Drupal front-end development.
 
